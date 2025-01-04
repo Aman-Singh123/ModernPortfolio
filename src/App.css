@@ -1,0 +1,159 @@
+@import url("https://fonts.googleapis.com/css2?family=Sansita:ital,wght@0,400;0,700;0,800;0,900;1,400;1,700;1,800;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: "Sansita", serif;
+}
+
+.header_bg {
+  background-image: url("../src/assets/Images/png/background.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+}
+
+.about_bgimg {
+  background-image: url("../src/assets/Images/png/aboutMeBg.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+ 
+}
+
+.contact_bgimg{
+  background-image: url("../src/assets/Images/png/contactbg.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+
+}
+
+.resume_bgimg{
+  background-image: url("../src/assets/Images/png/resumebg.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+
+}
+
+.workshopdesp_bgimg{
+   background-image: url("../src/assets/Images/png/workdescp.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+}
+
+
+.nav_bg {
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0.3) 100%);
+
+}
+
+.button_bg {
+  background: rgba(223, 146, 74, 1);
+}
+
+.form_effect {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.2) 100%);
+}
+
+
+.form_input {
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0.5) 100%);
+  border: none;
+  padding: 19px;
+  border-radius: 10px;
+  width: 100%;
+  height: 40px;
+  font-size: 16px;
+  color: #000;
+  outline: none;
+}
+
+textarea {
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0.5) 100%);
+  border: none;
+  padding: 19px;
+  border-radius: 10px;
+  width: 100%;
+  height: 113px;
+  font-size: 16px;
+  color: #000;
+  outline: none;
+}
+
+.shadow {
+  box-shadow: 0px 0px 18.6px 0px rgba(255, 255, 255, 0.25);
+}
+
+.workshop_sidebar {
+  background: rgba(255, 212, 171, 1);
+
+}
+
+.projects-slider-container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 0;
+}
+
+.slide {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 10px;
+}
+
+.slide-image {
+  width: 100%;
+  max-width: 350px; /* Increased width for more height */
+  height: 250px; /* Increased height for more size */
+  object-fit: cover; /* Ensures image covers the space properly */
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+
+.slick-center .slide-image {
+  opacity: 1;
+  transform: translateY(-10px); /* Slightly raised for the center image */
+}
+
+/* Reduced opacity for non-center images */
+.slick-slide:not(.slick-center) .slide-image {
+  opacity: 0.3;
+  transform: translateY(0); /* No upward effect for non-center images */
+}
+
+
+@media (max-width: 425px) {
+
+    .px-14{
+      padding-left: 14px !important;
+      padding-right: 14px !important;
+    }
+}
+
+@media (max-width: 768px) {
+  .slide-image {
+    max-width: 250px;
+    height: 200px;
+  }
+
+  .slide-title {
+    font-size: 14px;
+  }
+}
+
