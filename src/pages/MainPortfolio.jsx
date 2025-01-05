@@ -1,11 +1,14 @@
-import React from "react";
+import React,{useEffect} from "react";
 import NavPage from "../components/NavPage";
 import mainImage from '../assets/Images/png/main_image.png';
 import TypewriterComponent from 'typewriter-effect';
 import flowerimg from '../assets/Images/png/flower.png';
 
 
+
+
 function MainPortfolio() {
+  
   return (
     <div className="relative  xl:h-screen  ">
       <div className="container px-14 md:px-10 lg:px-14 mx-auto">
@@ -35,7 +38,7 @@ function MainPortfolio() {
 
             </div>
             <div className="w-full md:w-4/12">
-              <div className="w-3/4 md:w-full  overflow-hidden rounded-3xl ">
+              <div className="w-3/4 md:w-full  xl:w-3/4 overflow-hidden rounded-3xl ">
                 <img
                   src={mainImage}
                   alt="Main Image"

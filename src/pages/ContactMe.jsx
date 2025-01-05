@@ -1,12 +1,26 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import contactimg from '../assets/Images/png/contactimg.png'
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 function ContactMe() {
+    useEffect(() => {
+        AOS.init({
+            duration: 1000,
+            offset: 100,
+            delay: 300,
+            easing: 'ease-in-out',
+            once: false
+        });
+    }, []);
+
+
+
     return (
-        <div className='contact_bgimg'>
+        <div className='contact_bgimg overflow-hidden'>
             <div className="container pt-8 md:pt-10  px-14 md:px-10 lg:px-14 mx-auto  ">
                 <div className="block md:flex justify-between  gap-4">
-                    <div className="w-full md:w-4/12">
+                    <div className="w-full md:w-4/12" data-aos='fade-up-left'>
                         <div className="w-2/3 md:w-full  overflow-hidden rounded-3xl ">
                             <img
                                 src={contactimg}
@@ -21,7 +35,7 @@ function ContactMe() {
                         <p className='font-bold text-black my-2 text-[14px] md:text-[20px] lg:text-[24px]'>Got a question or proposal, or just want to say hello? Go ahead.</p>
                     </div>
 
-                    <div className='w-full md:w-6/12  lg:ps-[70px] pb-8  md:pb-20'>
+                    <div className='w-full md:w-6/12  lg:ps-[70px] pb-8  md:pb-20' data-aos='fade-up'>
                         <div className='form_effect border rounded-[20px] p-[10px] md:p-[50px] backdrop-blur-md   xl:w-3/4'>
 
                             <form action="" method="post">

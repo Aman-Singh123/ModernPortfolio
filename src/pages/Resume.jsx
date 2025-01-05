@@ -1,19 +1,30 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import aboutmeImg from '../assets/Images/png/aboutme.png'
 import skillicon from '../assets/Images/svg/skillsicon.svg'
 import downloadicon from '../assets/Images/svg/downloadicon.svg'
 import phone from '../assets/Images/svg/phone.svg'
 import email from '../assets/Images/svg/gmail.svg'
 import insta from '../assets/Images/svg/instagram-fill.svg'
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 
 export default function Resume() {
+    useEffect(() => {
+        AOS.init({
+            duration: 1000,              
+            offset: 100,              
+            delay: 300,                 
+            easing: 'ease-in-out',     
+            once: false  
+        });
+    }, []);
     return (
         <div className='resume_bgimg'>
             <div className="container pt-24 pb-8 md:pt-10 px-14 md:px-10 lg:px-14 mx-auto ">
                 <div className="block md:flex justify-between  gap-4">
                     <div className="w-full md:w-4/12">
-                        <div className="w-2/3 md:w-full  overflow-hidden rounded-3xl ">
+                        <div className="w-2/3 md:w-full relative z-10  overflow-hidden rounded-3xl ">
                             <img
                                 src={aboutmeImg}
                                 alt="Main Image"
@@ -21,7 +32,7 @@ export default function Resume() {
                             />
                         </div>
 
-                        <div className='mt-4'>
+                        <div className='mt-4' data-aos='fade-down'>
                             <p className='font-normal text-black  text-[24px] ' >Skills</p>
                             <div class="flex items-start mt-2">
                                 <img src={skillicon} alt="skillicon" />

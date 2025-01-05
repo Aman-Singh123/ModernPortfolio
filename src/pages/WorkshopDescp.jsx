@@ -9,7 +9,7 @@ function WorkshopDescp() {
             <div className="container pt-24 pb-8 md:pt-10 px-14 md:px-10 lg:px-14 mx-auto ">
                 <Link to='/workshop'>
                     <img className='mt-5' src={backwardarrow} alt="BackWardArrow" />
-                </Link> 
+                </Link>
                 <div className="bg-white w-47  md:w-[35.8%] lg:w-[27%] xl:w-[21.1%] 2xl:w-[17.3%] flex items-center rounded-full text-black font-bold ps-4 mt-10">
                     <p>in</p>
                     <button class="bg-orange-500 w-full text-white rounded-full ms-2 font-semibold px-6 py-2 hover:bg-orange-600 transition duration-300"    >

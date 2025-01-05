@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import aboutmeImg from '../assets/Images/png/aboutme.png'
 import projecticon from '../assets/Images/svg/projectdesign.svg'
 import uidesign from '../assets/Images/svg/uidesign.svg'
@@ -16,14 +16,27 @@ import sketching from '../assets/Images/svg/sketching.svg'
 import origami from '../assets/Images/svg/origami.svg'
 import basketball from '../assets/Images/svg/basketball.svg'
 import sculpting from '../assets/Images/svg/sculpting.svg'
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 
 function AboutMe() {
+    useEffect(() => {
+        AOS.init({
+            duration: 1000,
+            offset: 100,
+            delay: 300,
+            easing: 'ease-in-out',
+            once: false
+        });
+    }, []);
+
+
     return (
         <div className='about_bgimg'>
             <div className="container pt-24 pb-8 md:pt-10 px-14 md:px-10 lg:px-14 mx-auto ">
                 <div className="block md:flex justify-between  gap-4">
-                    <div className="w-full md:w-4/12">
+                    <div className="w-full md:w-4/12" data-aos='fade-up'>
                         <div className="w-2/3 md:w-full  overflow-hidden rounded-3xl ">
                             <img
                                 src={aboutmeImg}
@@ -32,7 +45,7 @@ function AboutMe() {
                             />
                         </div>
 
-                        <div className='mt-4'>
+                        <div className='mt-4' data-aos='fade-down'>
                             <p className='font-normal text-black  text-[24px] ' >Experience</p>
 
                             <p className='mt-2 font-normal text-[14px] '>july 2022 - Aug 2024</p>
@@ -80,12 +93,12 @@ function AboutMe() {
                         </div>
 
                     </div>
-                    <div className="w-full md:w-8/12 text-white">
+                    <div className="w-full md:w-8/12 text-white overflow-hidden">
                         <h2 className="text-[16px] md:text-[20px]  xl:text-[24px]  text-black font-bold">About me </h2>
-                        <h1 className=" font-bold text-black mt-3 text-[24px] lg:text-[72px] md:text[36px] ">
+                        <h1 data-aos='fade-right' className=" font-bold text-black mt-3 text-[24px] lg:text-[72px] md:text[36px] ">
                             Dipanshu Chauhan
                         </h1>
-                        <div class="flex items-center mt-3 md:mt-0">
+                        <div class="flex items-center mt-3 md:mt-0" data-aos='fade-down'>
                             <div class="border-t border-black   md:w-[100px] lg:w-[280px]   w-[100px] relative">
                                 <div class="absolute -top-1 right-0 bg-black rounded-full w-2 h-2"></div>
                             </div>
@@ -97,7 +110,7 @@ function AboutMe() {
                             I’m a skilled UI/UX Designer specializing in creating intuitive and visually appealing interfaces for mobile apps, admin panels, and websites. Focused on user-centric design, I craft responsive, functional, and engaging solutions. My work combines innovation and usability, delivering high-quality designs that enhance user experience and align with business goals.
                         </p>
 
-                        <div className='block md:flex justify-between  gap-14'>
+                        <div className='block md:flex justify-between  gap-14' data-aos='fade-up-left' >
                             <div className="w-full md:w-3/12 mt-7">
                                 <p className='font-normal text-black  text-[24px]' >Education</p>
                                 <p className='mt-2 font-normal text-black text-[14px] '>2021 - 2022</p>
